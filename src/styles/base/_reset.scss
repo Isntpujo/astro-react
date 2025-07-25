@@ -1,0 +1,97 @@
+/* Reset.css */
+*,
+*::before,
+*::after {
+  /* Box model */
+  margin: 0;
+  padding: 0;
+
+  /* Miscellaneous */
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  /* Box model */
+  width: 100%;
+  height: 100%;
+
+  /* Typography */
+  font-family: "Helvetica", sans-serif;
+
+  /* Miscellaneous */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none;
+}
+
+body {
+  background-color: var(--color-base);
+}
+
+body::-webkit-scrollbar {
+  /* Display */
+  display: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  /* Display */
+  display: block;
+
+  /* Box model */
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  /* Typography */
+  font: inherit;
+}
+
+a {
+  /* Typography */
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  /* Miscellaneous */
+  list-style: none;
+}
+
+button {
+  background: transparent;
+
+  /* Box model */
+  border: none;
+
+  /* Miscellaneous */
+  cursor: pointer;
+}
+
+h1 {
+  /* Box model */
+  margin: 0;
+  padding: 0;
+
+  /* Typography */
+  font-size: inherit;
+  font-weight: normal;
+}
+
+::selection {
+  background: rgb(33, 33, 33);
+  color: rgb(255, 255, 255);
+}
