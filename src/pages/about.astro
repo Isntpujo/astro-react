@@ -1,15 +1,9 @@
 ---
+import Layout from "../layouts/Layout.astro"
 
+const title = "About Astro";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>About</title>
-    </head>
-    <body>
-        Test
-    </body>
-</html>
+<Layout title={title}>
+    <a href="/">Back to Home</a>
+</Layout>
