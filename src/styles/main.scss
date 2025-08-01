@@ -3,6 +3,8 @@
 
 // Pages
 @use "pages/welcome";
+@use "pages/about";
 
 // Components
 @use "components/connectionStatus";
+@use "components/animations";
