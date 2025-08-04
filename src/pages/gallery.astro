@@ -4,78 +4,75 @@ import background from "../assets/background.svg";
 import { Image } from "astro:assets";
 import * as images from "../assets/images";
 import PreloadFade from "../cra-project/components/animation/PreloadFade.tsx";
-import ScrollSmooth from "../cra-project/components/animation/ScrollSmooth.tsx";
 
 const title = "Gallery Astro";
 ---
 
 <Layout title={title}>
-  <ScrollSmooth client:load>
-    <div id="container">
-      <img id="background" src={background.src} alt="Background" />
-      <div class="gallery-page">
-        <div class="card">
-          <h1>Welcome to Gallery</h1>
-          <a href="/" class="back-link">Back to Home</a>
-        </div>
-        <div class="wrapper__img-rose grid-img">
-          <PreloadFade client:load y={50} delay={0.2}>
-            <div class="test-img">
-              <div>Img WEBP 306kb with Image Optimized</div>
-              <Image
-                src={images.arcwebp}
-                alt="Astro Image"
-                quality={"low"}
-                class="img-rose"
-              />
-            </div>
-          </PreloadFade>
+  <div id="container">
+    <img id="background" src={background.src} alt="Background" />
+    <div class="gallery-page">
+      <div class="card">
+        <h1>Welcome to Gallery</h1>
+        <a href="/" class="back-link">Back to Home</a>
+      </div>
+      <div class="wrapper__img-rose grid-img">
+        <PreloadFade client:load y={50} delay={0.2}>
           <div class="test-img">
-            <PreloadFade client:load y={50} delay={0.2}>
-              <div>Img WEBP 306kb with Image Optimized</div>
-              <Image
-                src={images.goldwebp}
-                alt="Astro Image"
-                quality={"low"}
-                class="img-rose"
-              />
-            </PreloadFade>
+            <div>Img WEBP 306kb with Image Optimized</div>
+            <Image
+              src={images.arcwebp}
+              alt="Astro Image"
+              quality={"low"}
+              class="img-rose"
+            />
           </div>
+        </PreloadFade>
+        <PreloadFade client:load y={50} delay={0.2}>
           <div class="test-img">
-            <PreloadFade client:load y={50} delay={0.2}>
-              <div>Img WEBP 306kb with Image Optimized</div>
-              <Image
-                src={images.layerswebp}
-                alt="Astro Image"
-                quality={"low"}
-                class="img-rose"
-              />
-            </PreloadFade>
+            <div>Img WEBP 306kb with Image Optimized</div>
+            <Image
+              src={images.goldwebp}
+              alt="Astro Image"
+              quality={"low"}
+              class="img-rose"
+            />
           </div>
+        </PreloadFade>
+        <PreloadFade client:load y={50} delay={0.2}>
           <div class="test-img">
-            <PreloadFade client:load y={50} delay={0.2}>
-              <div>Img WEBP 306kb with Image Optimized</div>
-              <Image
-                src={images.purplewebp}
-                alt="Astro Image"
-                quality={"low"}
-                class="img-rose"
-              />
-            </PreloadFade>
+            <div>Img WEBP 306kb with Image Optimized</div>
+            <Image
+              src={images.layerswebp}
+              alt="Astro Image"
+              quality={"low"}
+              class="img-rose"
+            />
           </div>
+        </PreloadFade>
+        <PreloadFade client:load y={50} delay={0.2}>
           <div class="test-img">
-            <PreloadFade client:load y={50} delay={0.2}>
-              <div>Img WEBP 306kb with Image Optimized</div>
-              <Image
-                src={images.rayswebp}
-                alt="Astro Image"
-                quality={"low"}
-                class="img-rose"
-              />
-            </PreloadFade>
+            <div>Img WEBP 306kb with Image Optimized</div>
+            <Image
+              src={images.purplewebp}
+              alt="Astro Image"
+              quality={"low"}
+              class="img-rose"
+            />
           </div>
-        </div>
+        </PreloadFade>
+        <PreloadFade client:load y={50} delay={0.2}>
+          <div class="test-img">
+            <div>Img WEBP 306kb with Image Optimized</div>
+            <Image
+              src={images.rayswebp}
+              alt="Astro Image"
+              quality={"low"}
+              class="img-rose"
+            />
+          </div>
+        </PreloadFade>
       </div>
     </div>
-  </ScrollSmooth>
+  </div>
 </Layout>

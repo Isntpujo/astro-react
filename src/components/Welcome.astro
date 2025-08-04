@@ -5,7 +5,7 @@ import PreloadFade from "../cra-project/components/animation/PreloadFade";
 ---
 
 <div id="container">
-  <!-- <img id="background" src={background.src} alt="" fetchpriority="high" /> -->
+  <img id="background" src={background.src} alt="" fetchpriority="high" />
   <main id="main">
     <PreloadFade client:load y={50} delay={0.2}>
       <section id="hero">
@@ -25,7 +25,9 @@ import PreloadFade from "../cra-project/components/animation/PreloadFade";
           <a class="button" href="/about" data-astro-prefetch="load"
             >Go to About</a
           >
-          <a class="button" href="/gallery">Go to Gallery</a>
+          <a class="button" href="/gallery" data-astro-prefetch="load"
+            >Go to Gallery</a
+          >
           <a class="button" href="/contact">Go to Contact</a>
           <a class="button" href="/profile">Go to Profile</a>
         </section>

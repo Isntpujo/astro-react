@@ -1,7 +1,7 @@
 ---
-// ⬇️ Ini adalah script Astro block (harus di paling atas)
 import UserConnectionStatus from "../cra-project/components/UserConnectionStatus/index.tsx";
 import "../styles/main.scss";
+import ScrollSmooth from "../cra-project/components/animation/ScrollSmooth.tsx";
 import { ClientRouter } from "astro:transitions";
 
 const { title } = Astro.props;
@@ -19,6 +19,8 @@ const { title } = Astro.props;
   </head>
   <body>
     <UserConnectionStatus client:load />
-    <slot />
+    <ScrollSmooth client:load>
+      <slot />
+    </ScrollSmooth>
   </body>
 </html>

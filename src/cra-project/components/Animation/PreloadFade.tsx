@@ -23,7 +23,7 @@ export default function PreloadFade({
       initial={{ opacity: 0, x: x, y: y }}
       animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
       transition={{
-        duration: 0.6,
+        duration: 0.4,
         delay: delay,
         ease: "easeInOut",
         // type: "spring",
