@@ -1,18 +1,80 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 import background from "../assets/background.svg";
+import { Image } from "astro:assets";
+import * as images from "../assets/images";
+import astroImg from "../assets/images/arc.webp";
+import astroImgPng from "../assets/images/arc.png";
+import PreloadFade from "../cra-project/components/Animation/PreloadFade";
+import { image } from "motion/react-client";
 
 const title = "Gallery Astro";
 ---
 
 <Layout title={title}>
-    <div id="container">
-        <img id="background" src={background.src} alt="" fetchpriority="high" />
-        <div class="about-page">
-            <div class="card">
-                <h1>Welcome to Gallery</h1>
-                <a href="/" class="back-link">Back to Home</a>
-            </div>
+  <div id="container">
+    <!-- <img id="background" src={background.src} alt="" loading="lazy" /> -->
+    <div class="about-page">
+      <div class="card">
+        <h1>Welcome to Gallery</h1>
+        <a href="/" class="back-link">Back to Home</a>
+      </div>
+      <div class="wrapper__img-rose grid-img">
+        <div class="test-img">
+          <div>Img WEBP 306kb with Image Optimized</div>
+          <Image
+            src={images.arcwebp}
+            alt="Astro Image"
+            quality={"low"}
+            class="img-rose"
+          />
         </div>
+        <div class="test-img">
+          <div>Img WEBP 306kb with Image Optimized</div>
+          <Image
+            src={images.goldwebp}
+            alt="Astro Image"
+            quality={"low"}
+            class="img-rose"
+          />
+        </div>
+        <div class="test-img">
+          <div>Img WEBP 306kb with Image Optimized</div>
+          <Image
+            src={images.layerswebp}
+            alt="Astro Image"
+            quality={"low"}
+            class="img-rose"
+          />
+        </div>
+        <div class="test-img">
+          <div>Img WEBP 306kb with Image Optimized</div>
+          <Image
+            src={images.purplewebp}
+            alt="Astro Image"
+            quality={"low"}
+            class="img-rose"
+          />
+        </div>
+        <div class="test-img">
+          <div>Img WEBP 306kb with Image Optimized</div>
+          <Image
+            src={images.rayswebp}
+            alt="Astro Image"
+            quality={"low"}
+            class="img-rose"
+          />
+        </div>
+
+        <!-- <PreloadFade client:load x={50} delay={0.2}>
+          <Image
+            src={images.rose}
+            alt="Astro Wallpaper"
+            width={1440}
+            class="img-rose"
+          />
+        </PreloadFade> -->
+      </div>
     </div>
+  </div>
 </Layout>

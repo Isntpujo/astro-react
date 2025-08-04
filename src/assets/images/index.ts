@@ -1,0 +1,12 @@
+export { default as arc } from './arc.png';
+export { default as arcwebp } from './arc.webp';
+export { default as gold } from './gold.png';
+export { default as goldwebp } from './gold.webp';
+export { default as layers } from './layers.png';
+export { default as layerswebp } from './layers.webp';
+export { default as purple } from './purple.png';
+export { default as purplewebp } from './purple.webp';
+export { default as rays } from './rays.png';
+export { default as rayswebp } from './rays.webp';
+export { default as rose } from './rose.png';
+export { default as teal } from './teal.png';

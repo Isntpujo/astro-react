@@ -1,16 +1,14 @@
 ---
-
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
 import PreloadFade from "../cra-project/components/Animation/PreloadFade";
-
 ---
 
 <div id="container">
-  <img id="background" src={background.src} alt="" fetchpriority="high" />
-  <main>
-    <section id="hero">
-      <PreloadFade client:load y={50} delay={0.2}>
+  <!-- <img id="background" src={background.src} alt="" fetchpriority="high" /> -->
+  <main id="main">
+    <PreloadFade client:load y={50} delay={0.2}>
+      <section id="hero">
         <a href="https://astro.build"
           ><img
             src={astroLogo.src}
@@ -24,13 +22,15 @@ import PreloadFade from "../cra-project/components/Animation/PreloadFade";
           your project.
         </h1>
         <section id="links">
-          <a class="button" href="/about" data-astro-prefetch="load">Go to About</a>
+          <a class="button" href="/about" data-astro-prefetch="load"
+            >Go to About</a
+          >
           <a class="button" href="/gallery">Go to Gallery</a>
           <a class="button" href="/contact">Go to Contact</a>
           <a class="button" href="/profile">Go to Profile</a>
         </section>
-      </PreloadFade>
-    </section>
+      </section>
+    </PreloadFade>
   </main>
 
   <PreloadFade client:load x={50} delay={0.5}>
