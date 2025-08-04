@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro"
+import background from "../assets/background.svg";
+
+const title = "Gallery Astro";
+---
+
+<Layout title={title}>
+    <div id="container">
+        <img id="background" src={background.src} alt="" fetchpriority="high" />
+        <div class="about-page">
+            <div class="card">
+                <h1>Welcome to Gallery</h1>
+                <a href="/" class="back-link">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</Layout>

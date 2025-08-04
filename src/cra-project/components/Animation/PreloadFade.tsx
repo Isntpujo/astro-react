@@ -26,9 +26,9 @@ export default function PreloadFade({
         duration: 0.6,
         delay: delay,
         ease: "easeInOut",
-        type: "spring",
-        stiffness: 200,
-        bounce: 0.3,
+        // type: "spring",
+        // stiffness: 200,
+        // bounce: 0.3,
       }}
     >
       {children}
